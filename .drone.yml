@@ -10,3 +10,4 @@ pipeline:
       - go get -v github.com/stretchr/testify/require
       - go test -v -race -cover ./...
 
+branch: master
