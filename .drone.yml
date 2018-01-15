@@ -1,0 +1,12 @@
+workspace:
+  base: /go
+  path: src/github.com/sima-land/go-pid-file
+
+pipeline:
+  build:
+    image: golang:latest
+    commands:
+      - go get golang.org/x/tools/cmd/cover
+      - go get -v github.com/stretchr/testify/require
+      - go test -v -race -cover ./...
+
